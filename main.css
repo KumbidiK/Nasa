@@ -10,7 +10,7 @@ header {
   align-items: center;
 }
 
-/* 🔹 Center logo stays in middle */
+/* 🔹 Center logo stays in middle (desktop) */
 header .center-logo {
   position: absolute;
   left: 50%;
@@ -25,18 +25,16 @@ header .center-logo {
 
 /* 🔹 Individual customizations */
 .left-logo {
-  width: 130px; ;
+  width: 130px;
 }
-
 .center-logo {
-  width: 220px;  /* big */
+  width: 220px;
 }
-
 .right-logo {
-  width: 300px;   /* medium */
+  width: 300px;
 }
 
-
+/* General reset */
 * {
   margin: 0;
   padding: 0;
@@ -99,7 +97,7 @@ h1 {
 }
 
 .btn {
-  background:transparent;
+  background: transparent;
   border: 2px solid white;
   padding: 12px 30px;
   border-radius: 25px;
@@ -107,7 +105,7 @@ h1 {
   text-transform: uppercase;
   color: white;
   cursor: pointer;
-  text-decoration: none;   /* 🔹 removes underline */
+  text-decoration: none;
   display: inline-block;
   transition: all 0.3s ease;
 }
@@ -116,25 +114,36 @@ h1 {
   background: #8a8484;
 }
 
+/* ✅ Mobile Fix */
 @media (max-width: 768px) {
+  header {
+    flex-direction: column;   /* stack vertically */
+    position: relative;
+    gap: 10px;
+  }
+
   header .center-logo {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-}
+    position: relative;  /* no absolute */
+    transform: none;
+    left: auto;
+  }
 
   .left-logo {
-  width: 50px; ;
+    width: 70px;
   }
   .center-logo {
-    width: 80px;  /* big */
+    width: 100px;
   }
   .right-logo {
-    width: 100px;   /* medium */
+    width: 80px;
   }
 
   h1 {
-    font-size: 1rem;
+    font-size: 1.5rem;
     margin-bottom: 30px;
+  }
+
+  .buttons {
+    gap: 20px;
   }
 }

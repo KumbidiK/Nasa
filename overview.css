@@ -2,7 +2,7 @@
   --bg-image: url("mooonn.jpg"); /* 🔹 Replace with your background image */
   --accent: #d9df20;
   --text: rgba(255,255,255,0.98);   /* bright readable text */
-  --muted: rgba(255,255,255,0.9);   /* paragraph text */
+  --muted: rgba(238, 238, 238, 0.9);   /* paragraph text */
 }
 
 *{
